@@ -28,7 +28,7 @@
 function mp_easy_icons_enqueue_scripts(){
 	
 	//Enqueue Font Awesome CSS
-	wp_enqueue_style( 'fontawesome', plugins_url( '/fonts/font-awesome-4.0.3/css/font-awesome.css', dirname( __FILE__ ) ) );
+	wp_enqueue_style( 'fontawesome', plugins_url( '/fonts/font-awesome/css/font-awesome.css', dirname( __FILE__ ) ) );
 
 }
 add_action( 'wp_enqueue_scripts', 'mp_easy_icons_enqueue_scripts' );
@@ -42,7 +42,7 @@ add_action( 'wp_enqueue_scripts', 'mp_easy_icons_enqueue_scripts' );
 function mp_easy_icons_admin_enqueue_scripts(){
 	
 	//Enqueue Font Awesome CSS
-	wp_enqueue_style( 'fontawesome', plugins_url( '/fonts/font-awesome-4.0.3/css/font-awesome.css', dirname( __FILE__ ) ) );
+	wp_enqueue_style( 'fontawesome', plugins_url( '/fonts/font-awesome/css/font-awesome.css', dirname( __FILE__ ) ) );
 	
 	//mp_core_metabox_css
 	wp_enqueue_style( 'mp_core_metabox_css', MP_CORE_PLUGIN_URL . 'includes/css/core/mp-core-metabox.css', MP_CORE_VERSION );
