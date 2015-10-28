@@ -23,7 +23,7 @@ function mp_easy_icons_shortcode( $atts ) {
 		'color' => NULL,
 		'left_space' => NULL,
 		'right_space' => NULL,
-		'align' => NULL
+		'vertical_offset' => NULL
 	), $atts );	
 	
 	$style_output = NULL;
@@ -44,14 +44,18 @@ function mp_easy_icons_shortcode( $atts ) {
 	}
 	
 	//Set the space to the left of the icon
-	if ( !empty( $vars['left_space'] ) ){
+	if ( !empty( $vars['right_space'] ) ){
 		$style_output .= ' padding-right: ' . $vars['right_space'] . 'px; ';	
 	}
 	
-	//Set the vertical alignment of the icon
-	if ( !empty( $vars['align'] ) ){
-		$style_output .= ' vertical-align: ' . $vars['align'] . '; ';	
+	//Set the vertical offset
+	if ( !empty( $vars['vertical_offset'] ) ){
+		$style_output .= ' margin-top: ' . $vars['vertical_offset'] . 'px; ';	
 	}
+	
+	//Set the vertical alignment of the icon
+	$style_output .= ' vertical-align: top; ';	
+	$style_output .= 'line-height: 1.2;';
 			
 	$icon_html = '<span class="' . $vars['icon'] . '" style="' . $style_output . '"></span>';
 		
@@ -108,16 +112,13 @@ function mp_easy_icons_show_insert_shortcode( $post_type ){
 				'option_value' => '',
 			),
 			array(
-				'option_id' => 'align',
-				'option_title' => __( 'Alignment', 'mp_easy_icons' ),
-				'option_description' => __( 'How should this icon align with text on the same line?', 'mp_easy_icons' ),
-				'option_type' => 'select',
-				'option_value' => array( 
-					'bottom' => __( 'Bottom', 'mp_easy_icons' ),
-					'middle' => __( 'Middle', 'mp_easy_icons' ),
-				),
-				
+				'option_id' => 'vertical_offset',
+				'option_title' => __( 'Vertical Offset', 'mp_easy_icons' ),
+				'option_description' => __( 'Fine tune the vertical position of your icon with this. Negative values will shift the icon upwards. Positive values will shift it down.', 'mp_easy_icons' ),
+				'option_type' => 'number',
+				'option_value' => '0',
 			),
+			
 		)
 	); 
 		
