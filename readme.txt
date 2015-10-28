@@ -4,7 +4,7 @@ Donate link: https://mintplugins.com/
 Tags: icons, tinyMCE
 Requires at least: 3.0.1
 Tested up to: 4.3
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,6 +42,9 @@ Above any text editor in WordPress, click on the "Add Icon" button.
 1. Inserting a new icon
 
 == Changelog ==
+
+= 1.0.4 = October 28, 2015
+* Vertical Offset Controls Added to allow for fine-tuning the vertical positioning of icons.
 
 = 1.0.3 = October 26, 2015
 * Updated Font Awesome to Version 4.0.4
